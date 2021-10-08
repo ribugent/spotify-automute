@@ -49,7 +49,7 @@ There's a lot to do, but at this time this is the only way to run it. If you hav
 - [x] Create initial Readme
 - [x] Make repo public
 - [x] Avoid crashes when Spotify is not running
-- [ ] Add logs
+- [x] Add logs
 - [ ] Turn script as a long-running process
 - [ ] Allow start as a service/background process
 - [ ] Respect last users action if they mute/unmute Spotify manually

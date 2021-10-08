@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import dbus
+import logging
 import re
 import pulsectl
 
+logging.basicConfig(encoding='utf-8', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
 session_bus = dbus.SessionBus()
 pulse = pulsectl.Pulse('spotify-automute')
 
@@ -10,10 +12,13 @@ pulse = pulsectl.Pulse('spotify-automute')
 def main():
 	spotify_track_id = get_spotify_track_id()
 	if spotify_track_id is None:
+		logging.info("Spotify is not running")
 		return
 
-	spotify_sinks = get_spotify_sinks()
 	is_ad = track_is_ad(spotify_track_id)
+	logging.info("Spotify track id is '%s' and the ad detection result is %s", spotify_track_id, is_ad)
+
+	spotify_sinks = get_spotify_sinks()
 	sinks_mute(spotify_sinks, is_ad)
 
 
@@ -42,6 +47,7 @@ def get_spotify_sinks():
 
 def sinks_mute(sinks, mute):
 	for sink in sinks:
+		logging.info("Muting/unmuting sink %i:%s", sink.index, sink.name)
 		pulse.sink_input_mute(sink.index, mute)
 
 
