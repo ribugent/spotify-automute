@@ -54,6 +54,7 @@ There's a lot to do, but at this time this is the only way to run it. If you hav
 - [ ] Allow start as a service/background process
 - [ ] Respect last users action if they mute/unmute Spotify manually
 - [ ] Improve install
+- [ ] Use dbus signaling to retrieve track changes
 
 ## License
 
