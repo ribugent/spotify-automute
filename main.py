@@ -9,14 +9,21 @@ pulse = pulsectl.Pulse('spotify-automute')
 
 def main():
 	spotify_track_id = get_spotify_track_id()
+	if spotify_track_id is None:
+		return
+
 	spotify_sinks = get_spotify_sinks()
 	is_ad = track_is_ad(spotify_track_id)
 	sinks_mute(spotify_sinks, is_ad)
 
 
 def get_spotify_track_id():
-	spotify_bus = session_bus.get_object(
+	try:
+		spotify_bus = session_bus.get_object(
 		"org.mpris.MediaPlayer2.spotify", "/org/mpris/MediaPlayer2")
+	except dbus.exceptions.DBusException:
+		return None
+
 	spotify_properties = dbus.Interface(
 		spotify_bus, "org.freedesktop.DBus.Properties")
 
