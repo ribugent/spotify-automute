@@ -47,7 +47,7 @@ There's a lot to do, but at this time this is the only way to run it. If you hav
 
 - [x] Write a simple one-shot script
 - [x] Create initial Readme
-- [ ] Make repo public
+- [x] Make repo public
 - [ ] Add logs
 - [ ] Avoid crashes when Spotify is not running
 - [ ] Turn script as a long-running process
