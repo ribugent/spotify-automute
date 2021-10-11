@@ -11,21 +11,27 @@ pulse = pulsectl.Pulse('spotify-automute')
 
 
 def main():
+	spotify_track_id = None
 	while True:
-		automute()
+		spotify_track_id = automute(spotify_track_id)
 		time.sleep(1)
 
-def automute():
+def automute(previous_spotify_track_id=None):
 	spotify_track_id = get_spotify_track_id()
 	if spotify_track_id is None:
 		logging.info("Spotify is not running")
-		return
+		return None
+	elif spotify_track_id == previous_spotify_track_id:
+		logging.info("Spotify is playing the same track")
+		return spotify_track_id
 
 	is_ad = track_is_ad(spotify_track_id)
 	logging.info("Spotify track id is '%s' and the ad detection result is %s", spotify_track_id, is_ad)
 
 	spotify_sinks = get_spotify_sinks()
 	sinks_mute(spotify_sinks, is_ad)
+
+	return spotify_track_id
 
 
 def get_spotify_track_id():
