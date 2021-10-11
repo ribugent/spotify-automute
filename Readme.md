@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ```sh
 cd spotify-automute
 source local/bin/activate
-watch ./main.py
+./main.py
 ```
 
 There's a lot to do, but at this time this is the only way to run it. If you have experience using screen or tmux, you can execute this process on it.
