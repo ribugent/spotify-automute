@@ -53,6 +53,10 @@ To be clear, I haven't tried it, but since this script uses dbus it should work.
 
 I haven't tried it, but it should work in theory.
 
+**Does this project blocks/skips playing ads?**
+
+No, only mutes spotify, I don't plan to implement that feature.
+
 ## TODO
 
 - [x] Write a simple one-shot script
