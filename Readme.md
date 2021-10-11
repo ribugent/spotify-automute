@@ -43,6 +43,16 @@ source local/bin/activate
 
 There's a lot to do, but at this time this is the only way to run it. If you have experience using screen or tmux, you can execute this process on it.
 
+## FAQ
+
+**Does it work with Spotify flatpak/AppImage/snap versions?**
+
+To be clear, I haven't tried it, but since this script uses dbus it should work.
+
+**Does it work with pipewire pulseaudio drop-in replacement?**
+
+I haven't tried it, but it should work in theory.
+
 ## TODO
 
 - [x] Write a simple one-shot script
