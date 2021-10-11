@@ -2,6 +2,7 @@
 import dbus
 import logging
 import re
+import time
 import pulsectl
 
 logging.basicConfig(encoding='utf-8', level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
@@ -10,6 +11,11 @@ pulse = pulsectl.Pulse('spotify-automute')
 
 
 def main():
+	while True:
+		automute()
+		time.sleep(1)
+
+def automute():
 	spotify_track_id = get_spotify_track_id()
 	if spotify_track_id is None:
 		logging.info("Spotify is not running")
