@@ -58,8 +58,9 @@ def get_spotify_sinks():
 
 
 def sinks_mute(sinks, mute):
+	verb = "Muting" if mute else "Unmutting"
 	for sink in sinks:
-		logging.info("Muting/unmuting sink %i:%s", sink.index, sink.name)
+		logging.info("%s sink %i:%s", verb, sink.index, sink.name)
 		pulse.sink_input_mute(sink.index, mute)
 
 
