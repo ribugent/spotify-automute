@@ -19,10 +19,10 @@ def main():
 def automute(previous_spotify_track_id=None):
 	spotify_track_id = get_spotify_track_id()
 	if spotify_track_id is None:
-		logging.info("Spotify is not running")
+		logging.debug("Spotify is not running")
 		return None
 	elif spotify_track_id == previous_spotify_track_id:
-		logging.info("Spotify is playing the same track")
+		logging.debug("Spotify is playing the same track")
 		return spotify_track_id
 
 	is_ad = track_is_ad(spotify_track_id)
