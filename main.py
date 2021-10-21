@@ -54,7 +54,7 @@ def track_is_ad(track_id):
 
 def get_spotify_sinks():
 	input_sinks = pulse.sink_input_list()
-	return filter(lambda sink: sink.proplist.get('application.process.binary'), input_sinks)
+	return filter(lambda sink: sink.proplist.get('application.process.binary') == 'spotify', input_sinks)
 
 
 def sinks_mute(sinks, mute):
