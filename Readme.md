@@ -69,6 +69,7 @@ No, only mutes spotify, I don't plan to implement that feature.
 - [x] Respect last users action if they mute/unmute Spotify manually
 - [ ] Improve install
 - [ ] Use dbus signaling to retrieve track changes
+- [ ] Evaluate uploading to pypi
 
 ## License
 
