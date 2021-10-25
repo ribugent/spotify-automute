@@ -51,7 +51,7 @@ To be clear, I haven't tried it, but since this script uses dbus it should work.
 
 **Does it work with pipewire pulseaudio drop-in replacement?**
 
-I haven't tried it, but it should work in theory.
+Yes, it does.
 
 **Does this project blocks/skips playing ads?**
 
