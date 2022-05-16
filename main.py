@@ -49,7 +49,7 @@ def get_spotify_track_id():
 
 
 def track_is_ad(track_id):
-	return re.match(r"^spotify:ad:", track_id) != None
+	return re.match(r"^/com/spotify/ad/", track_id) != None
 
 
 def get_spotify_sinks():
