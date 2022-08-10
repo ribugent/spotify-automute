@@ -63,5 +63,5 @@ def sinks_mute(sinks, mute):
 		logging.info("%s sink %i:%s", verb, sink.index, sink.name)
 		pulse.sink_input_mute(sink.index, mute)
 
-
-main()
+if __name__ == "__main__":
+	main()
