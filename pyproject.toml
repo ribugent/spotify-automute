@@ -1,0 +1,26 @@
+[project]
+name = "spotify_automaute"
+description = "Spotify automute for Linux"
+readme = "Readme.md"
+license = {text = "GNU General Public License v3 (GPLv3)"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX :: Linux"
+]
+authors = [
+	{name = "Gerard Ribugent Navarro", email = "ribugent@gmail.com"}
+]
+version = "0.1"
+requires-python = ">=3.6"
+dependencies = [
+    'dbus-python',
+	'pulsectl'
+]
+
+[project.scripts]
+spotify-automute = "spotify_automute.main:main"
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
