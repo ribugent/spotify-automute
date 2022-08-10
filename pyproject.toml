@@ -1,5 +1,5 @@
 [project]
-name = "spotify_automaute"
+name = "spotify_automute"
 description = "Spotify automute for Linux"
 readme = "Readme.md"
 license = {text = "GNU General Public License v3 (GPLv3)"}
