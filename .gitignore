@@ -1,5 +1,9 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,linux,visualstudiocode,vim
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,linux,visualstudiocode,vim
+# Created by https://www.toptal.com/developers/gitignore/api/vim,linux,python,visualstudiocode,direnv
+# Edit at https://www.toptal.com/developers/gitignore?templates=vim,linux,python,visualstudiocode,direnv
+
+### direnv ###
+.direnv
+# .envrc
 
 ### Linux ###
 *~
@@ -223,4 +227,4 @@ tags
 # Ignore code-workspaces
 *.code-workspace
 
-# End of https://www.toptal.com/developers/gitignore/api/python,linux,visualstudiocode,vim
+# End of https://www.toptal.com/developers/gitignore/api/vim,linux,python,visualstudiocode,direnv
