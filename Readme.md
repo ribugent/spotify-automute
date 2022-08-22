@@ -10,38 +10,26 @@ But, in the last months I experienced some issues, the first was that for some r
 
 My bash skills are not high as the original creator, so I challenged myself to write my replacement in python, of course, the original project has a lot of more amazing features, but my objective is to focus only on muting ads.
 
-## (Dev) Dependencies
+## Dependencies
 
 - Linux
-- Python 3
-- Python virtualenv
+- Python 3.6 or higher
 
 ## Installation
 
-Clone the repo
-
 ```sh
-git clone git@github.com:ribugent/spotify-automute.git
-```
-
-Create virtualenv and install python modules
-
-```sh
-cd spotify-automute
-virtualenv local
-source local/bin/activate
-pip install -r requirements.txt
+pip install git+https://github.com/ribugent/spotify-automute.git
 ```
 
 ## Starting
 
+Run:
+
 ```sh
-cd spotify-automute
-source local/bin/activate
-src/spotify_automute/main.py
+spotify-automute
 ```
 
-There's a lot to do, but at this time this is the only way to run it. If you have experience using screen or tmux, you can execute this process on it.
+Currently, the process runs in foreground mode, so keeping in a separate terminal on in screen/tmux is recommended.
 
 ## FAQ
 
@@ -67,7 +55,7 @@ No, only mutes spotify, I don't plan to implement that feature.
 - [x] Turn script as a long-running process
 - [ ] Allow start as a service/background process
 - [x] Respect last users action if they mute/unmute Spotify manually
-- [ ] Improve install
+- [x] Improve install
 - [ ] Use dbus signaling to retrieve track changes
 - [ ] Evaluate uploading to pypi
 
